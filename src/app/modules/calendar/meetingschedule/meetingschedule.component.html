@@ -1,0 +1,33 @@
+<form [formGroup]="MeetingForm" (ngSubmit)="CreateMeeting()">
+    <h3 mat-dialog-title class="text-center">Schedule Meeting</h3>
+    <mat-dialog-content class="mat-typography">
+        <div class="d-flex gap-5">
+            <mat-form-field appearance="fill">
+                <mat-label>Choose Start date and time</mat-label>
+                <input matInput [owlDateTime]="dt1" (dateTimeChange)="onStartDateChange()" [owlDateTimeTrigger]="dt1" placeholder="Start Date Time" formControlName="start">
+                <owl-date-time #dt1></owl-date-time>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Choose End date and time</mat-label>
+                <input matInput [owlDateTime]="dt2" [min]="minEndDate" [owlDateTimeTrigger]="dt2" placeholder="End Date Time" formControlName="end">
+                <owl-date-time #dt2></owl-date-time>
+            </mat-form-field>
+        </div>
+        <div class="mt-1 title border-1 border-danger">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter Title</mat-label>
+                <input matInput formControlName="title">
+            </mat-form-field>
+        </div>
+        <div class="mt-1 title border-1 border-danger">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter Meeting Description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" [disabled]="!MeetingForm.valid" type="submit" cdkFocusInitial>Schedule</button>
+    </mat-dialog-actions>
+</form>

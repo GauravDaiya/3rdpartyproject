@@ -1,0 +1,49 @@
+.sliderContainer {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+
+    swiper-container {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.bgColor {
+    background-color: lightblue;
+}
+
+.carousel {
+    height: 100% !important;
+    .slider-item {
+        height: 100% !important;
+      img {
+        width: 100%;
+        height: 100% !important;
+        
+      }
+    }
+  }
+
+  .slick-list {
+    height: 100% !important;
+    
+  }
+
+  .slick-slider .slick-track, .slick-slider .slick-list {
+    height: 100% !important;
+  }
+
+  .carousel .slider-item {
+    margin-right: 20px; 
+  }
+
+  .mytooltip {
+    border: 0.1px solid red;
+  }

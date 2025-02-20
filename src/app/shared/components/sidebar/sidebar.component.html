@@ -1,0 +1,7 @@
+<div class="sidemenu">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle routerLink="/calendar" [ngClass]="{'active': router.url.includes('/calendar')}">Calendar</mat-button-toggle>
+        <mat-button-toggle routerLink="/charts" [ngClass]="{'active': router.url.includes('/charts')}">Charts</mat-button-toggle>
+        <mat-button-toggle routerLink="/sliders" [ngClass]="{'active': router.url.includes('/sliders')}">Sliders</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
